@@ -14,12 +14,11 @@ Your solution must be located at `ftp`:
 [,text,subs="+macros"]
 ----
 icon:folder[] ...
-├─ icon:folder[] term
-│  └─ icon:folder[] ftp
-│     ├─ icon:folder[] part-1
-│     │  └─ icon:file-text[] part-1.sh
-│     └─ icon:folder[] part-2
-│        └─ icon:file-text[] part-2.sh
+├─ icon:folder[] ftp
+│  ├─ icon:folder[] part-1
+│  │  └─ icon:file-text[] part-1.sh
+│  └─ icon:folder[] part-2
+│     └─ icon:file-text[] part-2.sh
 └─ icon:folder[] .git
 ----
 
