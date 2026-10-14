@@ -1,13 +1,12 @@
 = Task FTP
 
-You can use `curl`, `lftp` or `wget` commands
+You can use `curl` or `wget` commands
 
 :icons: font
 
 > Branch: `ftp` +
-> Fenrir ID: `ftp`
-
-WARNING: Tests need update!!!
+> Fenrir ID: `ftp` +
+> Points: `10`
 
 Your solution must be located at `ftp`:
 
@@ -15,17 +14,53 @@ Your solution must be located at `ftp`:
 ----
 icon:folder[] ...
 ├─ icon:folder[] ftp
-│  ├─ icon:folder[] part-1
-│  │  └─ icon:file-text[] part-1.sh
-│  └─ icon:folder[] part-2
-│     └─ icon:file-text[] part-2.sh
+│  ├─ icon:file-code[] part-1.sh
+│  └─ icon:file-code[] part-2.sh
 └─ icon:folder[] .git
 ----
 
-== Tasks
+== Accessing files (5 points)
 
-* (10) https://github.com/devtools-course/task-ftp/tree/main/part-1/README.md[FTP-1. Accessing files]
-* (10) https://github.com/devtools-course/task-ftp/tree/main/part-2/README.md[FTP-2. Uploading files]
+Create a script `part-1.sh` which downloads a bash script from the server and runs it.
+
+The server is running on `server`. You can connect to it using the FTP protocol.
+
+The file you need is accessible through the endpoint `java/kotlin/groovy.sh`.
+
+Credentials are passed as env variables: `USER` & `PASSWORD`.
+
+CAUTION: Your script must not pollute the filesystem!
+
+=== Error handling
+
+Is not needed. We guarantee the correctness of the input data.
+
+=== Questions
+
+* Which port does FTP use?
+* Recall the docker installation guide: how does it work?
+
+== Uploading files (5 points)
+
+Create a script `part-2.sh` which uploads a file to the server.
+
+The server is running on `server`. You can connect to it using the FTP protocol.
+
+The file you need is passed as `$1`.
+
+After the file is uploaded, it must be accessible through the endpoint `/sieben/ein/zwei.drei`.
+
+Credentials are passed as env variables: `USER` & `PASSWORD`.
+
+CAUTION: Your script must not pollute the filesystem!
+
+=== Error handling
+
+Is not needed. We guarantee the correctness of the input data.
+
+=== Questions
+
+* What if the destination directory does not exist?
 
 == Copyright
 
